@@ -1,0 +1,92 @@
+:root {
+  --bg: #f5f8ff;
+  --text: #1e2430;
+  --primary: #2f6bff;
+  --primary-dark: #1f4dbe;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+}
+
+.hero {
+  padding: 64px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #dde8ff, #f5f8ff);
+}
+
+.hero h1 {
+  margin: 16px auto;
+  max-width: 680px;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.4;
+  white-space: pre-line;
+}
+
+.tag {
+  margin: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.lead {
+  margin: 0 auto 24px;
+  max-width: 620px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 24px 20px 56px;
+}
+
+.section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 20px;
+}
+
+.form form {
+  display: grid;
+  gap: 12px;
+}
+
+input {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #d4d9e3;
+  border-radius: 8px;
+}
+
+button {
+  margin-top: 8px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover,
+.cta:hover {
+  background: var(--primary-dark);
+}
