@@ -11,3 +11,25 @@
 - `x/`: X(旧Twitter)広告向け
 
 必要に応じて各フォルダ内に `index.html` / `scss` / `assets` などを作成してください。
+
+## Savoriaプレビュー手順
+
+`practice/lp/savoria.html` はこのリポジトリ配下の相対パスです。  
+`/workspace/portfolio/...` はCodex実行環境専用の絶対パスのため、ローカルMacでは存在しません。
+
+### ローカル確認コマンド（Mac / Linux）
+
+```bash
+cd /Users/<your-name>/path/to/portfolio  # 例
+python3 -m http.server 8080
+# ブラウザで http://localhost:8080/practice/lp/savoria.html を開く
+```
+
+### ファイル存在確認
+
+```bash
+ls practice/lp/savoria.html
+```
+
+
+> ※ `<>` はプレースホルダ記法です。ターミナルにそのまま入力すると構文エラーになります。
