@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOLT Fitness | 鍛える熱量に、最強の環境を。</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#040507;--panel:#0a0d12;--line:#2a2f39;--yellow:#f2ef00;--text:#f5f7fa}
+    *{box-sizing:border-box} body{margin:0;font-family:'Noto Sans JP',sans-serif;background:#000;color:var(--text)}
+    .lp{max-width:1200px;margin:0 auto;background:radial-gradient(circle at 50% 12%,#1a1f29 0,#07090f 40%,#000 85%)}
+    .hero{min-height:100vh;position:relative;padding:24px 20px 64px;overflow:hidden;background:
+      linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.92) 75%),
+      url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat}
+    .hero:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 78%,rgba(242,239,0,.25),transparent 35%),radial-gradient(circle at 87% 68%,rgba(242,239,0,.22),transparent 32%);pointer-events:none}
+    .top{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:2}
+    .logo{font-weight:900;font-size:clamp(2rem,5vw,3.8rem);line-height:1;color:var(--yellow);font-style:italic;letter-spacing:.02em}
+    .logo small{display:block;color:#fff;font-size:.46em;font-style:normal;font-weight:700;letter-spacing:.08em;margin-top:8px}
+    .menu{width:52px;height:34px;display:grid;gap:7px}.menu span{display:block;height:4px;background:#fff;border-radius:4px}
+    .hero-inner{max-width:920px;margin:40vh auto 0;text-align:center;position:relative;z-index:2}
+    .catch{font-size:clamp(2.2rem,9vw,8rem);line-height:1.08;font-weight:900;letter-spacing:.03em;text-shadow:0 6px 0 #000,0 0 18px rgba(242,239,0,.25)}
+    .catch .y{color:var(--yellow)}
+    .sub{font-size:clamp(1rem,2.2vw,2rem);line-height:1.8;font-weight:700;margin:28px auto;max-width:880px}
+    .sub strong{color:var(--yellow)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:16px;text-decoration:none;background:var(--yellow);color:#0a0a0a;padding:18px 56px;border-radius:16px;font-size:clamp(1.4rem,3.4vw,3rem);font-weight:900;box-shadow:0 0 30px rgba(242,239,0,.38)}
+    .stats{display:grid;gap:16px;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:44px}
+    .stat{background:linear-gradient(180deg,rgba(5,8,13,.92),rgba(0,0,0,.96));border:1px solid rgba(242,239,0,.55);border-radius:12px;padding:24px 14px;text-align:center;box-shadow:inset 0 0 24px rgba(242,239,0,.08)}
+    .stat .i{font-size:2.2rem;color:var(--yellow)} .stat h3{margin:10px 0 0;font-size:clamp(1.5rem,3.5vw,2.9rem)}
+    section{padding:76px 20px;background:linear-gradient(180deg,#05070c,#000)}
+    .title{font-size:clamp(1.8rem,4vw,3.2rem);text-align:center;margin:0 0 26px;font-weight:900}.title span{color:var(--yellow)}
+    .cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));max-width:1060px;margin:0 auto}
+    .card{background:#0a0d13;border:1px solid rgba(242,239,0,.35);padding:20px;border-radius:10px}
+    .card h3{margin:0 0 8px;color:var(--yellow);font-size:1.25rem}.card p{margin:0;line-height:1.8;color:#dde2eb}
+    .results .card p:first-child{font-size:2.2rem;font-weight:900;color:var(--yellow)}
+    .faq details{max-width:900px;margin:0 auto 12px;background:#0a0d13;border:1px solid rgba(242,239,0,.35);padding:14px 16px;border-radius:10px}
+    .faq summary{cursor:pointer;font-weight:700}.faq p{margin:8px 0 0;line-height:1.8;color:#dde2eb}
+    .cta{text-align:center}.cta .btn{margin-top:8px}
+    @media (max-width:768px){.hero{padding:18px 14px 52px}.hero-inner{margin-top:28vh}.stats{grid-template-columns:1fr}.btn{width:100%;padding:16px 22px;border-radius:12px}.menu{width:46px}}
+  </style>
+</head>
+<body>
+  <main class="lp">
+    <section class="hero" id="fv">
+      <div class="top">
+        <div class="logo">VOLT Fitness<small>ボルト</small></div>
+        <div class="menu" aria-label="menu"><span></span><span></span><span></span></div>
+      </div>
+      <div class="hero-inner">
+        <h1 class="catch">鍛える<span class="y">熱量</span>に、<br>最強の環境を。</h1>
+        <p class="sub">集中できる空間、追い込める設備、前進を実感できるプログラム。<br><strong>VOLT Fitness</strong>が、本気のトレーニングを加速させます。</p>
+        <a href="#cta" class="btn">今すぐチェック <span>›</span></a>
+        <div class="stats">
+          <article class="stat"><div class="i">⚡</div><h3>高強度トレーニング</h3></article>
+          <article class="stat"><div class="i">🏋</div><h3>最新設備</h3></article>
+          <article class="stat"><div class="i">👥</div><h3>コミュニティ</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="issue"><h2 class="title"><span>課題提起</span></h2><div class="cards"><article class="card"><h3>継続できない</h3><p>成果が見えづらく、モチベーションが長続きしない。</p></article><article class="card"><h3>設備不足</h3><p>やりたいメニューに必要な器具が揃っていない。</p></article><article class="card"><h3>一人で不安</h3><p>フォームや負荷が正しいか判断できず、伸び悩む。</p></article></div></section>
+    <section id="solution"><h2 class="title"><span>解決策</span></h2><div class="cards"><article class="card"><h3>可視化プログラム</h3><p>強度・頻度・成果を数値で見える化し、継続を支援。</p></article><article class="card"><h3>プロ仕様設備</h3><p>目的別ゾーンで高効率に追い込み可能。</p></article><article class="card"><h3>伴走サポート</h3><p>トレーナーとコミュニティが習慣化まで伴走。</p></article></div></section>
+    <section id="results" class="results"><h2 class="title"><span>実績</span></h2><div class="cards"><article class="card"><p>94%</p><p>3か月継続率</p></article><article class="card"><p>4.8/5</p><p>会員満足度</p></article><article class="card"><p>-6.2kg</p><p>平均体重変化（12週）</p></article></div></section>
+    <section id="pricing"><h2 class="title"><span>料金</span></h2><div class="cards"><article class="card"><h3>ライト</h3><p>月額 ¥9,800 / ジム利用のみ</p></article><article class="card"><h3>スタンダード</h3><p>月額 ¥16,800 / プログラム + 測定</p></article><article class="card"><h3>エリート</h3><p>月額 ¥29,800 / PT月4回 + 食事指導</p></article></div></section>
+    <section id="faq" class="faq"><h2 class="title"><span>FAQ</span></h2><details><summary>初心者でも入会できますか？</summary><p>はい。初回測定後、体力レベルに合わせたメニューを提案します。</p></details><details><summary>見学・体験はありますか？</summary><p>無料見学と体験セッションを随時受付しています。</p></details><details><summary>休会は可能ですか？</summary><p>マイページから申請でき、翌月から適用されます。</p></details></section>
+    <section id="cta" class="cta"><h2 class="title">本気を、<span>ここから。</span></h2><p class="sub">まずは無料体験で、VOLTの熱量を体感してください。</p><a class="btn" href="#fv">無料体験を予約する <span>›</span></a></section>
+  </main>
+</body>
+</html>
