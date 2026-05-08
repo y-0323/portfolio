@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savoria | 記憶に残る、美食のデートへ。</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --gold: #d9b36b;
+        --deep: #120909;
+        --wine: #2c070c;
+        --cream: #f4e7c9;
+        --text: #f7f1e2;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Noto Sans JP", sans-serif;
+        background: radial-gradient(circle at 50% 0%, #2d1111 0%, #0d0909 65%);
+        color: var(--text);
+      }
+      .frame {
+        max-width: 1100px;
+        margin: 18px auto;
+        padding: 24px;
+        border: 1px solid rgba(217, 179, 107, 0.8);
+        position: relative;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.62), rgba(44, 7, 12, 0.92));
+        box-shadow: 0 0 0 1px rgba(217, 179, 107, 0.24) inset;
+      }
+      .frame::before,
+      .frame::after {
+        content: "";
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        height: 1px;
+        background: rgba(217, 179, 107, 0.35);
+      }
+      .frame::before { top: 12px; }
+      .frame::after { bottom: 12px; }
+      section {
+        padding: 64px 24px;
+        border-bottom: 1px solid rgba(217, 179, 107, 0.18);
+      }
+      section:last-of-type { border-bottom: none; }
+      .brand {
+        font-size: clamp(2rem, 5vw, 4.2rem);
+        letter-spacing: 0.18em;
+        color: var(--gold);
+        text-align: center;
+        margin: 0;
+      }
+      .hero {
+        padding-top: 40px;
+        background:
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(44, 7, 12, 0.93) 65%),
+          url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=80")
+            center / cover no-repeat;
+      }
+      .hero-copy {
+        max-width: 760px;
+        margin: 28vh auto 0;
+        text-align: center;
+      }
+      h2 {
+        font-size: clamp(1.8rem, 4.5vw, 3.3rem);
+        line-height: 1.4;
+        color: var(--cream);
+        font-weight: 500;
+        margin: 0.2em 0;
+      }
+      .lead {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        line-height: 1.9;
+        color: #f2e8d2;
+      }
+      .divider {
+        width: 180px;
+        height: 1px;
+        background: var(--gold);
+        margin: 24px auto;
+        position: relative;
+      }
+      .divider::after {
+        content: "✦";
+        position: absolute;
+        left: 50%;
+        top: -13px;
+        translate: -50% 0;
+        color: var(--gold);
+      }
+      .cta-btn {
+        display: inline-flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 16px 40px;
+        background: linear-gradient(180deg, #f0d9a7, #d3ac6a);
+        color: #44200d;
+        text-decoration: none;
+        border-radius: 999px;
+        border: 1px solid #f9e9c1;
+        font-size: clamp(1.1rem, 2.2vw, 2rem);
+        font-weight: 500;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+      }
+      .sec-title {
+        font-size: clamp(1.5rem, 3vw, 2.4rem);
+        color: var(--gold);
+        margin: 0 0 22px;
+        text-align: center;
+      }
+      .cards {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .card {
+        padding: 22px;
+        border: 1px solid rgba(217, 179, 107, 0.4);
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 12px;
+      }
+      .card h3 {
+        margin: 0.2em 0 0.6em;
+        color: #f7e8c4;
+      }
+      .card p {
+        margin: 0;
+        line-height: 1.8;
+        color: #f5ecdc;
+      }
+      .price {
+        font-size: 2rem;
+        color: var(--cream);
+        font-weight: 700;
+      }
+      .faq details {
+        border: 1px solid rgba(217, 179, 107, 0.4);
+        padding: 14px 16px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.28);
+        margin-bottom: 12px;
+      }
+      .faq summary {
+        cursor: pointer;
+        font-weight: 700;
+        color: #f2dfb5;
+      }
+      .faq p {
+        margin: 10px 0 2px;
+        color: #f5ecdc;
+        line-height: 1.8;
+      }
+      .cta {
+        text-align: center;
+        padding-bottom: 72px;
+      }
+      @media (max-width: 768px) {
+        .frame {
+          margin: 0;
+          padding: 14px;
+          border-left: none;
+          border-right: none;
+        }
+        .hero-copy { margin-top: 20vh; }
+        section { padding: 48px 14px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="frame">
+      <section class="hero" id="fv">
+        <p class="brand">Savoria</p>
+        <div class="hero-copy">
+          <h2>記憶に残る、<br />美食のデートへ。</h2>
+          <div class="divider"></div>
+          <p class="lead">
+            厳選レストランと特別なコース体験を、Savoriaがセレクト。<br />
+            大人のふたりに似合う、上質で非日常な時間をスマートに見つけられます。
+          </p>
+          <a href="#cta" class="cta-btn">今すぐ体験を見つける <span>›</span></a>
+        </div>
+      </section>
+
+      <section id="issue">
+        <h3 class="sec-title">課題提起</h3>
+        <div class="cards">
+          <article class="card"><h3>お店選びが難しい</h3><p>特別な日の期待に応える店を短時間で見つけるのは意外と大変。</p></article>
+          <article class="card"><h3>情報が多すぎる</h3><p>SNSや口コミが散在し、比較の軸がぶれやすい。</p></article>
+          <article class="card"><h3>失敗したくない</h3><p>雰囲気・味・サービスのどれかが欠けると満足度が下がる。</p></article>
+        </div>
+      </section>
+
+      <section id="solution">
+        <h3 class="sec-title">解決策</h3>
+        <div class="cards">
+          <article class="card"><h3>審美眼で厳選</h3><p>味・空間・接客の3軸でSavoria独自にキュレーション。</p></article>
+          <article class="card"><h3>シーン別提案</h3><p>記念日、初デート、サプライズなど目的に合ったコースを提案。</p></article>
+          <article class="card"><h3>予約まで最短</h3><p>比較から候補決定、予約導線まで一気通貫で迷わない。</p></article>
+        </div>
+      </section>
+
+      <section id="results">
+        <h3 class="sec-title">実績</h3>
+        <div class="cards">
+          <article class="card"><p class="price">92%</p><p>「また使いたい」と回答</p></article>
+          <article class="card"><p class="price">1,200+</p><p>掲載レストラン・コース</p></article>
+          <article class="card"><p class="price">4.8/5</p><p>平均満足度（体験後レビュー）</p></article>
+        </div>
+      </section>
+
+      <section id="pricing">
+        <h3 class="sec-title">料金</h3>
+        <div class="cards">
+          <article class="card"><h3>ライト</h3><p class="price">¥0</p><p>おすすめ閲覧・保存</p></article>
+          <article class="card"><h3>プレミアム</h3><p class="price">¥2,980/月</p><p>限定コース先行案内・コンシェルジュ相談</p></article>
+          <article class="card"><h3>記念日プラン</h3><p class="price">¥9,800〜</p><p>演出付きコース体験（店舗により変動）</p></article>
+        </div>
+      </section>
+
+      <section id="faq" class="faq">
+        <h3 class="sec-title">FAQ</h3>
+        <details><summary>当日の予約は可能ですか？</summary><p>店舗枠が空いていれば可能です。即時予約対応の表示をご確認ください。</p></details>
+        <details><summary>アレルギー対応はできますか？</summary><p>予約時の要望入力で各店舗に共有されます。詳細は店舗確認となります。</p></details>
+        <details><summary>キャンセル料はかかりますか？</summary><p>コース・店舗ごとに規定が異なります。申込前に必ず表示条件をご確認ください。</p></details>
+      </section>
+
+      <section id="cta" class="cta">
+        <h3 class="sec-title">特別な夜を、今日決める。</h3>
+        <p class="lead">最短1分で、ふたりに似合う美食体験を見つけましょう。</p>
+        <a href="#" class="cta-btn">無料で体験を探す <span>›</span></a>
+      </section>
+    </main>
+  </body>
+</html>
